@@ -5,10 +5,12 @@ import java.util.Arrays;
 import java.util.ResourceBundle;
 
 import com.astrokoala.enums.Pages;
+import com.astrokoala.models.User;
 import com.astrokoala.playbook.App;
 import com.astrokoala.playbook.Greet;
 //import com.astrokoala.playbook.Greet;
 import com.astrokoala.playbook.State;
+import com.astrokoala.services.login_service.LoginService;
 
 import animatefx.animation.ZoomIn;
 import javafx.event.Event;
@@ -150,8 +152,14 @@ public class PlayEntryController implements Initializable{
 	@FXML
 	public void login() {
 		if (!txtSignInEmail.getText().equals("") && !txtPass.getText().equals("")) {
-			greetUser(txtSignInEmail.getText()); //TODO: user name
-			App.getPrimaryStage().setScene(App.getPages().get(Pages.HOME.getName()));
+			//App.getPrimaryStage().setScene(App.getPages().get(Pages.HOME.getName()));
+			// if logged in, greet them
+			User user = LoginService.login(txtSignInEmail.getText(), txtPass.getText());
+			if (user.getId() > 0)
+				//greetUser(user.getUsername()); //TODO: user name
+				new Greet().greetPeople(Arrays.asList(user.getUsername()));
+			else 
+				System.out.println("Login failed :(");
 		} else {
 			if (txtSignInEmail.getText().equals("")) { System.out.println("email can't be empty!!"); outlineRed(txtSignInEmail); }
 			if (txtPass.getText().equals("")) { System.out.println("pass can't be empty!!"); outlineRed(txtPass); }

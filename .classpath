@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/main/xtend-gen"/>
 	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/AnimateFX-1.2.0.jar"/>
@@ -9,5 +8,23 @@
 	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/jsch-0.1.54.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="con" path="org.eclipse.xtend.XTEND_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/javafx-swt.jar"/>
+	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/javafx.base.jar"/>
+	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/javafx.controls.jar"/>
+	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/javafx.fxml.jar"/>
+	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/javafx.graphics.jar"/>
+	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/javafx.media.jar"/>
+	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/javafx.swing.jar"/>
+	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/javafx.web.jar"/>
+	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/json-20200518.jar"/>
+	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/jackson-annotations-2.11.1.jar"/>
+	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/jackson-core-2.11.1.jar"/>
+	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/jackson-databind-2.11.1.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Playbooks_API"/>
 	<classpathentry kind="output" path="out"/>
 </classpath>

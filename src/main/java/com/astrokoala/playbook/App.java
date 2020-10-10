@@ -4,10 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.astrokoala.enums.Pages;
-import com.sun.deploy.uitoolkit.impl.fx.HostServicesFactory;
-import com.sun.javafx.application.HostServicesDelegate;
 
 import javafx.application.Application;
+import javafx.application.HostServices;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -16,7 +15,8 @@ public class App extends Application {
 	private static Stage primaryStage;
 	private static Map<String, Scene> pages = new HashMap<>();
 	private static State state = State.getInstance();
-	private  HostServicesDelegate hostServices = HostServicesFactory.getInstance(this);
+	//private  HostServicesDelegate hostServices = HostServicesFactory.getInstance(this);
+	private HostServices hostServices = this.getHostServices();
 	
   public static void main(String[] args) {
     Application.launch(args);
@@ -44,7 +44,7 @@ public class App extends Application {
 
 	private static void setPrimaryStage(Stage stage) {
 		primaryStage = stage;
-		primaryStage.setScene(pages.get(Pages.PLAY_ENTRY.getName()));
+		primaryStage.setScene(pages.get(Pages.HOME.getName()));
 		primaryStage.setTitle("Fancy Title");
 		primaryStage.setWidth(780);
 		primaryStage.setHeight(510);

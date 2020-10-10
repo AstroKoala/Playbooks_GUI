@@ -6,12 +6,14 @@ import java.util.Map;
 import com.astrokoala.models.Playbook;
 import com.sun.javafx.application.HostServicesDelegate;
 
+import javafx.application.HostServices;
+
 public class State {
 	
 	private static State instance;
   private static String info = "Initial info class";
   private static String userName;
-  private static HostServicesDelegate hostService;
+  private static HostServices hostService;
 //  private Playbook currentPlaybook;
   private static Map<String, Playbook> playbooks = new HashMap<>();
   
@@ -58,11 +60,11 @@ public class State {
 		State.playbooks = playbooks;
 	}
 	
-	protected static void setHostServices(HostServicesDelegate hs) {
-		hostService = hs;
+	protected static void setHostServices(HostServices hostServices) {
+		hostService = hostServices;
 	}
 	
-	public static HostServicesDelegate getHostServices() {
+	public static HostServices getHostServices() {
 		return hostService;
 	}
   

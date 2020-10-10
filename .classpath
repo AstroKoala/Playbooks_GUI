@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/xtend-gen"/>
+	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/AnimateFX-1.2.0.jar"/>
+	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/fontawesomefx-8.9.jar"/>
+	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/jfoenix-8.0.10.jar"/>
+	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/jsch-0.1.54.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="con" path="org.eclipse.xtend.XTEND_CONTAINER"/>
+	<classpathentry kind="output" path="out"/>
+</classpath>

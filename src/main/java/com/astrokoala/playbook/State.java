@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.astrokoala.models.Playbook;
-import com.sun.javafx.application.HostServicesDelegate;
+import com.astrokoala.models.User;
 
 import javafx.application.HostServices;
 
@@ -12,8 +12,8 @@ public class State {
 	
 	private static State instance;
   private static String info = "Initial info class";
-  private static String userName;
   private static HostServices hostService;
+  private static User user = new User();
 //  private Playbook currentPlaybook;
   private static Map<String, Playbook> playbooks = new HashMap<>();
   
@@ -43,14 +43,13 @@ public class State {
   	return playbooks;
   }
   
-  public static void setUserName(String u) {
-  	userName = u;
-  }
-  
-  public static String getUserName() {
-  	return userName;
-  }
-  
+  public static void setUser(User u) {
+		user = u;
+	}
+	
+	public static User getUser() {
+		return user;
+	}
   
   public static void addPlaybook(Playbook pb) {
   	getPlaybooks().put(pb.getName(), pb);

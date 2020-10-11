@@ -4,7 +4,6 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.ResourceBundle;
 
-import com.astrokoala.enums.Pages;
 import com.astrokoala.models.User;
 import com.astrokoala.playbook.App;
 import com.astrokoala.playbook.Greet;
@@ -55,9 +54,7 @@ public class PlayEntryController implements Initializable{
 	@FXML private Button loginBtn;
 	@FXML private Hyperlink	forgotPass;
 	@FXML private CheckBox rememberMe;
-	
-	//TODO: LOGIN FUNCTION
-	private boolean isLoggedIn = true;
+
 	
 	@FXML
 	public void close() {
@@ -167,11 +164,11 @@ public class PlayEntryController implements Initializable{
 	}
 	
 	private void greetUser(String userName) { 
-		//Runnable run = () -> {
-			State.setUserName(txtSignInEmail.getText());
-			new Greet().greetPeople(Arrays.asList(State.getUserName()));
-    //}
-    //new Thread(run);
+//		//Runnable run = () -> {
+//			State.setUserName(txtSignInEmail.getText());
+//			new Greet().greetPeople(Arrays.asList(State.getUserName()));
+//    //}
+//    //new Thread(run);
   }    
 	
 	@FXML

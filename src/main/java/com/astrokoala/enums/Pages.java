@@ -3,15 +3,17 @@ package com.astrokoala.enums;
 import java.io.IOException;
 
 import com.astrokoala.playbook.App;
-import com.astrokoala.scenes.home.HomeController;
 import com.astrokoala.scenes.play_entry.PlayEntryController;
+import com.astrokoala.scenes.landing.LandingController;
+import com.astrokoala.scenes.login.LoginController;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 
 public enum Pages {
-	HOME("Home", new HomeController()), 
-	PLAY_ENTRY("PlayEntry", new PlayEntryController());
+	LOGIN("Login", new LoginController()), 
+	PLAY_ENTRY("PlayEntry", new PlayEntryController()),
+	LANDING("Landing", new LandingController());
 	
 	private final String name;
 	private final Object type;

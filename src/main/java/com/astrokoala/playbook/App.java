@@ -44,7 +44,7 @@ public class App extends Application {
 
 	private static void setPrimaryStage(Stage stage) {
 		primaryStage = stage;
-		primaryStage.setScene(pages.get(Pages.HOME.getName()));
+		primaryStage.setScene(pages.get(Pages.LOGIN.getName()));
 		primaryStage.setTitle("Fancy Title");
 		primaryStage.setWidth(780);
 		primaryStage.setHeight(510);

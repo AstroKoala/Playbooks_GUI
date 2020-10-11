@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="400.0" minWidth="400.0" prefHeight="493.0" prefWidth="769.0" style="-fx-background-color: #aaa;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.astrokoala.scenes.login.LoginController">
+   <children>
+      <BorderPane layoutX="-2.0" layoutY="-6.0" prefHeight="503.0" prefWidth="775.0" style="-fx-background-color: #aaa;">
+         <left>
+            <Pane prefHeight="503.0" prefWidth="437.0" styleClass="linear-grad" stylesheets="@Login.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox layoutX="20.0" layoutY="16.0" prefHeight="22.0" prefWidth="81.0" />
+                  <ImageView fx:id="pngBigIcon" fitHeight="295.0" fitWidth="289.0" layoutX="74.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/icons/american-football-field.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblFooter" layoutX="20.0" layoutY="474.0" onMousePressed="#visitAuthor" prefHeight="15.0" prefWidth="103.0" text="Created by AstroKoala" textFill="#d3d3d3">
+                     <font>
+                        <Font name="Arial Italic" size="10.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </Pane>
+         </left>
+         <center>
+            <StackPane prefHeight="503.0" prefWidth="378.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane fx:id="paneSignIn" focusTraversable="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #aaa;">
+                     <children>
+                        <TextField fx:id="txtSignInEmail" layoutX="54.0" layoutY="181.0" onKeyPressed="#handleKeyPress" onKeyTyped="#resetControlInputStyle" prefHeight="40.0" prefWidth="245.0" promptText="Email" style="-fx-background-color: white;" />
+                        <PasswordField fx:id="txtSignInPass" layoutX="54.0" layoutY="242.0" onKeyPressed="#handleKeyPress" onKeyTyped="#resetControlInputStyle" prefHeight="40.0" prefWidth="245.0" promptText="Password" style="-fx-background-color: white;" />
+                        <CheckBox fx:id="chkRememberMe" layoutX="54.0" layoutY="315.0" mnemonicParsing="false" onKeyPressed="#handleKeyPress" prefHeight="33.0" prefWidth="110.0" style="-fx-text-color: whhite;" text="Remember me" textFill="WHITE">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </CheckBox>
+                        <Button fx:id="btnSignIn" defaultButton="true" layoutX="178.0" layoutY="314.0" mnemonicParsing="false" onKeyPressed="#handleKeyPress" onMouseReleased="#login" prefHeight="35.0" prefWidth="120.0" styleClass="button1" stylesheets="@Login.css" text="Continue" />
+                        <Button fx:id="btnNoAcct" defaultButton="true" layoutX="52.0" layoutY="387.0" mnemonicParsing="false" onMouseReleased="#showRegister" opacity="0.45" prefHeight="35.0" prefWidth="248.0" styleClass="button2" stylesheets="@Login.css" text="Don't have an account? Sign up!" />
+                        <Hyperlink fx:id="linkForgotPass" layoutX="122.0" layoutY="463.0" onMouseReleased="#forgotPassword" opacity="0.53" prefHeight="26.0" prefWidth="117.0" style="-fx-focus-color: transparent;" text="Forgot password?" textAlignment="CENTER" />
+                        <Label fx:id="lblSignIn" layoutX="54.0" layoutY="117.0" prefHeight="41.0" prefWidth="72.0" text="Sign in">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneRegister" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #aaa;" stylesheets="@Login.css">
+                     <children>
+                        <TextField fx:id="txtRegisterUsername" layoutX="47.0" layoutY="120.0" onKeyPressed="#handleKeyPress" onKeyTyped="#resetControlInputStyle" prefHeight="40.0" prefWidth="245.0" promptText="Username" style="-fx-background-color: white;" />
+                        <TextField fx:id="txtRegisterEmail" layoutX="47.0" layoutY="197.0" onKeyTyped="#resetControlInputStyle" prefHeight="40.0" prefWidth="245.0" promptText="Email" style="-fx-background-color: white;" />
+                        <TextField fx:id="txtRegisterEmailVerify" layoutX="47.0" layoutY="273.0" onKeyTyped="#resetControlInputStyle" prefHeight="40.0" prefWidth="245.0" promptText="Re-enter email" style="-fx-background-color: white;" />
+                        <PasswordField fx:id="txtRegisterPass" layoutX="47.0" layoutY="349.0" onKeyPressed="#handleKeyPress" onKeyTyped="#resetControlInputStyle" prefHeight="40.0" prefWidth="245.0" promptText="Password" style="-fx-background-color: white;" />
+                        <Button fx:id="btnRegister" defaultButton="true" layoutX="172.0" layoutY="423.0" mnemonicParsing="false" onKeyReleased="#handleKeyPress" onMouseReleased="#register" prefHeight="35.0" prefWidth="120.0" style="-fx-border-radius: 10;" styleClass="button1" stylesheets="@Login.css" text="Get started" />
+                        <ImageView fx:id="btnBack" fitHeight="30.0" fitWidth="50.0" layoutX="12.0" layoutY="14.0" onMouseClicked="#showSignIn" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/icons/icon_back.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblRegister" focusTraversable="false" layoutX="25.0" layoutY="63.0" prefHeight="44.0" prefWidth="289.0" text="Create your free account">
+                           <font>
+                              <Font name="Arial Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblInvalid" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="159.0" layoutY="264.0" prefHeight="17.0" prefWidth="122.0" textAlignment="CENTER" textFill="RED" />
+                        <Label fx:id="lblInvalidVerify" alignment="CENTER_RIGHT" focusTraversable="false" layoutX="158.0" layoutY="332.0" prefHeight="17.0" prefWidth="122.0" textAlignment="CENTER" textFill="RED" />
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

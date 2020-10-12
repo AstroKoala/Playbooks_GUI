@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry including="**/*.java" kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="src" path="src/main/xtend-gen"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Playbooks_API"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/AnimateFX-1.2.0.jar"/>
 	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/fontawesomefx-8.9.jar"/>
 	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/jfoenix-8.0.10.jar"/>
 	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/jsch-0.1.54.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="con" path="org.eclipse.xtend.XTEND_CONTAINER"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/javafx-swt.jar"/>
 	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/javafx.base.jar"/>
 	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/javafx.controls.jar"/>
@@ -25,6 +38,11 @@
 	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/jackson-annotations-2.11.1.jar"/>
 	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/jackson-core-2.11.1.jar"/>
 	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/jackson-databind-2.11.1.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Playbooks_API"/>
-	<classpathentry kind="output" path="out"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/trevorlandreneau/Development/jar_files/fxiconics-0.0.5-jfx.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>
